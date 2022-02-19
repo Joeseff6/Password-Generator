@@ -1,6 +1,7 @@
-import "./App.css";
 import InputContainer from "./components/InputContainer";
 import OutputContainer from "./components/OutputContainer";
+import "./App.css";
+
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <h1 className="text-center">Password Generator</h1>
       </header>
       <div className="row justify-content-center">
-        <div className="col-md-4">
+        <div className="col-md-4" id="input-container">
           <InputContainer />
         </div>
         <div className="col-md-4">
