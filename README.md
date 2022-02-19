@@ -8,9 +8,10 @@ A simple password generator application that take a user's input and generates r
 _Insert link here when deployed!_
 
 # Goals for Deployment
-[ ] User can provide input based on provided selections
-[ ] User can submit selection for password generation
-[ ] Passwords are displayed upon submission
+
+- [ ] User can provide input based on provided selections
+- [ ] User can submit selection for password generation
+- [ ] Passwords are displayed upon submission
 
 # Initial Design
 My initial design of the password generator, designed on Figma.
