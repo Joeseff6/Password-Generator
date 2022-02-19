@@ -1,12 +1,19 @@
 import React from "react";
+import "./OutputContainer.css";
 
 class OutputContainer extends React.Component {
   render() {
     return (
-      <div>
-        <h1>This is the output container</h1>
-      </div>
-    )
+      <React.Fragment>
+        <div className="row">
+          <h4 className="text-center" id="output-header">
+            Generated Passwords
+          </h4>
+        </div>
+        <div className="row">
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
