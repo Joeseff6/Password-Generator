@@ -3,6 +3,16 @@ import options from "../helper/options";
 import "./InputContainer.css";
 
 class InputContainer extends React.Component {
+  state = {
+    charLength: 8,
+    lowercase: false,
+    uppercase: false,
+    symbols: false,
+    numbers: false,
+    unique: false,
+    numOfPasswords: 1,
+  };
+
   mapCharLengthOptions() {
     return options.charLength.map((value) => {
       return (
@@ -34,15 +44,17 @@ class InputContainer extends React.Component {
         <div className="row">
           <form>
             <label htmlFor="passwordLength">Password Character Length: </label>
-            <select name="passwordLength" id="passwordLength">
+            <select name="passwordLength" id="passwordLength" onChange={(e) => this.setState({ charLength: parseInt(e.target.value)})}>
               {this.mapCharLengthOptions()}
             </select>
             <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="lowercase"
+                value={this.state.lowercase}
+                onChange={() => this.setState({ lowercase: !this.state.lowercase })}
               />
               <label className="form-check-label" htmlFor="lowercase">
                 Lowercase Characters [a-z]
@@ -50,50 +62,54 @@ class InputContainer extends React.Component {
             </div>
             <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="uppercase"
+                onChange={() => this.setState({ uppercase: !this.state.uppercase })}
               />
               <label className="form-check-label" htmlFor="uppercase">
-              Uppercase Characters [A-Z]
+                Uppercase Characters [A-Z]
               </label>
             </div>
             <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="symbols"
+                onChange={() => this.setState({ symbols: !this.state.symbols })}
               />
               <label className="form-check-label" htmlFor="symbols">
-              Symbols [!@#$%^&*()]
+                Symbols [!@#$%^&*()]
               </label>
             </div>
             <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="numbers"
+                onChange={() => this.setState({ numbers: !this.state.numbers })}
               />
               <label className="form-check-label" htmlFor="numbers">
-              Numbers [0-9]
+                Numbers [0-9]
               </label>
             </div>
             <div className="form-check form-switch">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 role="switch"
                 id="unique"
+                onChange={() => this.setState({ unique: !this.state.unique })}
               />
               <label className="form-check-label" htmlFor="unique">
-              Unique Values [No Duplicates]
+                Unique Values [No Duplicate Characters]
               </label>
             </div>
             <label htmlFor="numOfPasswords">Number of Passwords: </label>
-            <select name="numOfPasswords" id="numOfPasswords">
+            <select name="numOfPasswords" id="numOfPasswords" onChange={(e) => this.setState({ numOfPasswords: parseInt(e.target.value) })}>
               {this.mapNumOfPasswords()}
             </select>
             <button className="btn btn-primary d-block m-auto">Submit</button>
