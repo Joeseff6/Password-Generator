@@ -7,9 +7,15 @@ function App() {
     <div className="App">
       <header>
         <h1 className="text-center">Password Generator</h1>
-        <InputContainer />
-        <OutputContainer />
       </header>
+      <div className="row justify-content-center">
+        <div className="col-md-4">
+          <InputContainer />
+        </div>
+        <div className="col-md-4">
+          <OutputContainer />
+        </div>
+      </div>
     </div>
   );
 }
