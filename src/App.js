@@ -1,7 +1,15 @@
+import "./App.css";
+import InputContainer from "./components/InputContainer";
+import OutputContainer from "./components/OutputContainer";
+
 function App() {
   return (
     <div className="App">
-      <h1>This is a password generator app</h1>
+      <header>
+        <h1 className="text-center">Password Generator</h1>
+        <InputContainer />
+        <OutputContainer />
+      </header>
     </div>
   );
 }
