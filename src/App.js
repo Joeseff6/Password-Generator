@@ -10,10 +10,10 @@ function App() {
         <h1 className="text-center">Password Generator</h1>
       </header>
       <div className="row justify-content-center">
-        <div className="col-md-4" id="input-container">
+        <div className="col-md-5" id="input-container">
           <InputContainer />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-5">
           <OutputContainer />
         </div>
       </div>
