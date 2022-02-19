@@ -13,7 +13,7 @@ function App() {
         <div className="col-md-5" id="input-container">
           <InputContainer />
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5" id="output-container">
           <OutputContainer />
         </div>
       </div>
