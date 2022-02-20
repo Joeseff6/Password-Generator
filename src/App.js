@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <h1 className="text-center">Password Generator</h1>
+          <h1 className="text-center my-3">Password Generator</h1>
         </header>
         <div className="row justify-content-center" id="app-container">
           <div className="col-md-5" id="input-container">
