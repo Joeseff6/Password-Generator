@@ -1,5 +1,6 @@
 import React from "react";
 import options from "../helper/options";
+import generatePassword from "../helper/generatePassword";
 import "./InputContainer.css";
 
 class InputContainer extends React.Component {
@@ -33,6 +34,12 @@ class InputContainer extends React.Component {
     });
   }
 
+  onFormSubmit = (e) => {
+    e.preventDefault();
+    const generatedPassword = generatePassword(this.state);
+    console.log(generatedPassword);
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -42,9 +49,15 @@ class InputContainer extends React.Component {
           </h4>
         </div>
         <div className="row">
-          <form>
+          <form onSubmit={this.onFormSubmit}>
             <label htmlFor="passwordLength">Password Character Length: </label>
-            <select name="passwordLength" id="passwordLength" onChange={(e) => this.setState({ charLength: parseInt(e.target.value)})}>
+            <select
+              name="passwordLength"
+              id="passwordLength"
+              onChange={(e) =>
+                this.setState({ charLength: parseInt(e.target.value) })
+              }
+            >
               {this.mapCharLengthOptions()}
             </select>
             <div className="form-check form-switch">
@@ -54,7 +67,9 @@ class InputContainer extends React.Component {
                 role="switch"
                 id="lowercase"
                 value={this.state.lowercase}
-                onChange={() => this.setState({ lowercase: !this.state.lowercase })}
+                onChange={() =>
+                  this.setState({ lowercase: !this.state.lowercase })
+                }
               />
               <label className="form-check-label" htmlFor="lowercase">
                 Lowercase Characters [a-z]
@@ -66,7 +81,9 @@ class InputContainer extends React.Component {
                 type="checkbox"
                 role="switch"
                 id="uppercase"
-                onChange={() => this.setState({ uppercase: !this.state.uppercase })}
+                onChange={() =>
+                  this.setState({ uppercase: !this.state.uppercase })
+                }
               />
               <label className="form-check-label" htmlFor="uppercase">
                 Uppercase Characters [A-Z]
@@ -109,10 +126,18 @@ class InputContainer extends React.Component {
               </label>
             </div>
             <label htmlFor="numOfPasswords">Number of Passwords: </label>
-            <select name="numOfPasswords" id="numOfPasswords" onChange={(e) => this.setState({ numOfPasswords: parseInt(e.target.value) })}>
+            <select
+              name="numOfPasswords"
+              id="numOfPasswords"
+              onChange={(e) =>
+                this.setState({ numOfPasswords: parseInt(e.target.value) })
+              }
+            >
               {this.mapNumOfPasswords()}
             </select>
-            <button className="btn btn-primary d-block m-auto">Submit</button>
+            <button className="btn btn-primary d-block m-auto" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </React.Fragment>
