@@ -11,6 +11,7 @@ class InputContainer extends React.Component {
     symbols: false,
     numbers: false,
     numOfPasswords: 1,
+    display: "d-none",
   };
 
   mapCharLengthOptions() {
@@ -35,6 +36,12 @@ class InputContainer extends React.Component {
 
   onFormSubmit = (e) => {
     e.preventDefault();
+    if (!Object.values(this.state).includes(true)) {
+      this.setState({ display: "" })
+      return;
+    } else {
+      this.setState({ display: "d-none" })
+    }
     const generatedPassword = generatePassword(this.state);
     this.props.onPasswordGeneration(generatedPassword);
   };
@@ -123,6 +130,9 @@ class InputContainer extends React.Component {
             >
               {this.mapNumOfPasswords()}
             </select>
+            <div className={`error-message text-center mt-3 ${this.state.display}`}>
+              You must select at least one option.
+            </div>
             <button className="btn btn-primary d-block m-auto my-4" type="submit">
               Submit
             </button>
