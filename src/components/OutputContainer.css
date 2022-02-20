@@ -2,3 +2,8 @@
   background-color: #1D3F49;
   color: white;
 }
+
+.generated-password-block {
+  background-color: white;
+  border-radius: 10px;
+}
