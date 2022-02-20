@@ -11,3 +11,12 @@ label {
 .error-message {
   color: red;
 }
+
+.btn.btn-primary {
+  background-color: #3F8BA2;
+  border: black 1px solid;
+}
+
+.form-check-input:checked {
+  background-color: #3F8BA2;
+}
