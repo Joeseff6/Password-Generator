@@ -37,7 +37,7 @@ class InputContainer extends React.Component {
   onFormSubmit = (e) => {
     e.preventDefault();
     const generatedPassword = generatePassword(this.state);
-    console.log(generatedPassword);
+    this.props.onPasswordGeneration(generatedPassword);
   };
 
   render() {
