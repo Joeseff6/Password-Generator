@@ -10,7 +10,6 @@ class InputContainer extends React.Component {
     uppercase: false,
     symbols: false,
     numbers: false,
-    unique: false,
     numOfPasswords: 1,
   };
 
@@ -112,18 +111,6 @@ class InputContainer extends React.Component {
               />
               <label className="form-check-label" htmlFor="numbers">
                 Numbers [0-9]
-              </label>
-            </div>
-            <div className="form-check form-switch">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="unique"
-                onChange={() => this.setState({ unique: !this.state.unique })}
-              />
-              <label className="form-check-label" htmlFor="unique">
-                Unique Values [No Duplicate Characters]
               </label>
             </div>
             <label htmlFor="numOfPasswords">Number of Passwords: </label>
