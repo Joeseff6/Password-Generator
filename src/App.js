@@ -21,7 +21,7 @@ class App extends React.Component {
             <InputContainer onPasswordGeneration={this.onPasswordGeneration} />
           </div>
           <div className="col-md-5" id="output-container">
-            <OutputContainer />
+            <OutputContainer generatedPasswords={this.state.generatedPasswords} />
           </div>
         </div>
       </div>
