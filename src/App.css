@@ -2,6 +2,10 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+  background-color: #F0F7F9;
+}
+
 #input-container {
   background-color: #D3E8EE;
 }
