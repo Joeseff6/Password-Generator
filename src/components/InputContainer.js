@@ -6,7 +6,7 @@ import "./InputContainer.css";
 class InputContainer extends React.Component {
   state = {
     charLength: 8,
-    lowercase: false,
+    lowercase: true,
     uppercase: false,
     symbols: false,
     numbers: false,
@@ -67,6 +67,7 @@ class InputContainer extends React.Component {
                 role="switch"
                 id="lowercase"
                 value={this.state.lowercase}
+                checked={this.state.lowercase}
                 onChange={() =>
                   this.setState({ lowercase: !this.state.lowercase })
                 }
