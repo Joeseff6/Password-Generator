@@ -9,9 +9,10 @@ _Insert link here when deployed!_
 
 # Goals for Deployment
 
-- [ ] User can provide input based on provided selections
-- [ ] User can submit selection for password generation
-- [ ] Passwords are displayed upon submission
+- [x] User can provide input based on provided selections
+- [x] User can submit selection for password generation
+- [x] Passwords are displayed upon submission
+- [x] User can click on a password to copy it
 
 # Initial Design
 My initial design of the password generator, designed on Figma.
@@ -22,4 +23,11 @@ My initial design of the password generator, designed on Figma.
 The initial framework and logic for this project, designed on draw.io.
 
 ![Initial framework of the password generator app](./public/assets/images/Capture2.PNG)
+
+# Final Product
+Screenshot of the final product for this project.
+
+![The final product of the project, displaying one password](./public/assets/images/Capture3.PNG)
+
+![The final product of the project, displaying 5 passwords](./public/assets/images/Capture4.PNG)
 
