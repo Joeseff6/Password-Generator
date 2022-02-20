@@ -2,7 +2,7 @@ const generatePassword = (formObject) => {
   let possibleCharacters = "";
   if (formObject.lowercase) {possibleCharacters += "abcdefghijklmnopqrstuvwxyz"};
   if (formObject.uppercase) {possibleCharacters += "ABCDEFGHIJKLMOPQRSTUVWXYZ"};
-  if (formObject.symbols) {possibleCharacters += "!@#$%^&*()"};
+  if (formObject.symbols) {possibleCharacters += '~`!@#$%^&*()_-+={[}]|:;"<,>.?/'};
   if (formObject.numbers) {possibleCharacters += "0123456789"};
   let possibleCharactersLength = possibleCharacters.length;
   let generatedPassword = "";
