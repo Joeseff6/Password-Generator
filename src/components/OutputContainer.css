@@ -1,6 +1,7 @@
 #output-header {
   background-color: #1D3F49;
   color: white;
+  height: 40px;
 }
 
 .generated-password-block {

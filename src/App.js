@@ -16,7 +16,7 @@ class App extends React.Component {
         <header>
           <h1 className="text-center">Password Generator</h1>
         </header>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" id="app-container">
           <div className="col-md-5" id="input-container">
             <InputContainer onPasswordGeneration={this.onPasswordGeneration} />
           </div>

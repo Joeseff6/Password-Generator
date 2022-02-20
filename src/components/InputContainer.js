@@ -43,13 +43,13 @@ class InputContainer extends React.Component {
     return (
       <React.Fragment>
         <div className="row">
-          <h4 className="text-center" id="options-header">
+          <h4 className="d-flex align-items-center justify-content-center" id="options-header">
             Select your options
           </h4>
         </div>
         <div className="row">
           <form onSubmit={this.onFormSubmit}>
-            <label htmlFor="passwordLength">Password Character Length: </label>
+            <label htmlFor="passwordLength" className="mt-3">Password Character Length:</label>
             <select
               name="passwordLength"
               id="passwordLength"
@@ -59,7 +59,7 @@ class InputContainer extends React.Component {
             >
               {this.mapCharLengthOptions()}
             </select>
-            <div className="form-check form-switch">
+            <div className="form-check form-switch my-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -75,7 +75,7 @@ class InputContainer extends React.Component {
                 Lowercase Characters [a-z]
               </label>
             </div>
-            <div className="form-check form-switch">
+            <div className="form-check form-switch my-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -89,7 +89,7 @@ class InputContainer extends React.Component {
                 Uppercase Characters [A-Z]
               </label>
             </div>
-            <div className="form-check form-switch">
+            <div className="form-check form-switch my-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -101,7 +101,7 @@ class InputContainer extends React.Component {
                 Symbols [!@#$%^&*()]
               </label>
             </div>
-            <div className="form-check form-switch">
+            <div className="form-check form-switch my-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -123,7 +123,7 @@ class InputContainer extends React.Component {
             >
               {this.mapNumOfPasswords()}
             </select>
-            <button className="btn btn-primary d-block m-auto" type="submit">
+            <button className="btn btn-primary d-block m-auto my-4" type="submit">
               Submit
             </button>
           </form>

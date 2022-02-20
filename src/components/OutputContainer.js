@@ -6,7 +6,7 @@ class OutputContainer extends React.Component {
     return (
       <React.Fragment>
         <div className="row">
-          <h4 className="text-center" id="output-header">
+          <h4 className="d-flex align-items-center justify-content-center mb-5" id="output-header">
             Generated Passwords
           </h4>
           {this.props.generatedPasswords.map((password) => {

@@ -9,3 +9,7 @@
 #output-container {
   background-color: #2E6576;
 }
+
+#app-container {
+  height: 300px
+}

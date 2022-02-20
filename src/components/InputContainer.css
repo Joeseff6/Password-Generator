@@ -1,4 +1,9 @@
 #options-header {
   background-color: #3F8BA2;
   color: white;
+  height: 40px;
+}
+
+label {
+  margin-right: 15px;
 }
