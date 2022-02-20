@@ -2,6 +2,10 @@ import React from "react";
 import "./OutputContainer.css";
 
 class OutputContainer extends React.Component {
+  onPasswordClick = (e) => {
+    navigator.clipboard.writeText(e.target.innerText);
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -12,9 +16,9 @@ class OutputContainer extends React.Component {
           {this.props.generatedPasswords.map((password) => {
             return (
               <div className="row justify-content-center my-2" key={password}>
-                <div className="generated-password-block col-md-6 text-center">
+                <button className="generated-password-block col-md-6 text-center" onClick={this.onPasswordClick}>
                   {password}
-                </div>
+                </button>
               </div>
             );
           })}
