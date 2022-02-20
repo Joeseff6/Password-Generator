@@ -105,7 +105,7 @@ class InputContainer extends React.Component {
                 onChange={() => this.setState({ symbols: !this.state.symbols })}
               />
               <label className="form-check-label" htmlFor="symbols">
-                Symbols [!@#$%^&*()]
+                Symbols {'[~`!@#$%^&*()_-+={[}]|:;\<,>.?/"]'}
               </label>
             </div>
             <div className="form-check form-switch my-3">
