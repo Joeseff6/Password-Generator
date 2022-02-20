@@ -10,7 +10,17 @@ class OutputContainer extends React.Component {
             Generated Passwords
           </h4>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
+          {this.props.generatedPasswords.map((password) => {
+            return (
+              <div
+                className="generated-password-block col-md-6 text-center"
+                key={password}
+              >
+                {password}
+              </div>
+            );
+          })}
         </div>
       </React.Fragment>
     );
