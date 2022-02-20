@@ -9,15 +9,12 @@ class OutputContainer extends React.Component {
           <h4 className="text-center" id="output-header">
             Generated Passwords
           </h4>
-        </div>
-        <div className="row justify-content-center">
           {this.props.generatedPasswords.map((password) => {
             return (
-              <div
-                className="generated-password-block col-md-6 text-center"
-                key={password}
-              >
-                {password}
+              <div className="row justify-content-center my-2" key={password}>
+                <div className="generated-password-block col-md-6 text-center">
+                  {password}
+                </div>
               </div>
             );
           })}
