@@ -5,7 +5,7 @@ A password generator powered by React.js
 A simple password generator application that take a user's input and generates random passwords based off that input. This application is built off of React.js and styled with Bootstrap. 
 
 # Link to Deployed App :link:
-_Insert link here when deployed!_
+_https://adoring-williams-ef7264.netlify.app/_
 
 # Goals for Deployment
 
