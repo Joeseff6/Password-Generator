@@ -134,7 +134,7 @@ class InputContainer extends React.Component {
               You must select at least one option.
             </div>
             <button className="btn btn-primary d-block m-auto my-4" type="submit">
-              Submit
+              Generate
             </button>
           </form>
         </div>
